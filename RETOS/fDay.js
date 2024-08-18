@@ -1,3 +1,4 @@
+// Día 1
 let numeroUn = 1
 let stringUn = '1'
 let numeroTreinta = 30
@@ -31,7 +32,7 @@ function comparacion() {
   console.log('Las variables numeroUn y stringUn no tienen el mismo valor')
  }
  
- if (numeroTreinta == stringTreinta) {
+ if (numeroTreinta === stringTreinta) {
   console.log('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')
  } else {
   console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
@@ -43,4 +44,19 @@ function comparacion() {
   console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
  }
 }
-comparacion()
+// comparacion()
+
+// Día 2
+
+let nombre = prompt("¿Cual es tu nombre?");
+let edad = prompt("¿Cuantos años tienes?");
+let lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?");
+
+alert(`Saludos ${nombre}, tienes ${edad} años y ya estes aprendiendo ${lenguaje}`);
+
+let teGusta = prompt(`¿Te gusta estudiar ${lenguaje}? Responde con el número 1 para SÍ o 2 para NO.`)
+if (teGusta == 1) {
+  alert("¡Muy bien! Sigue estudiando y tendrás mucho éxito.")
+} else {
+  alert("Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?")
+}
