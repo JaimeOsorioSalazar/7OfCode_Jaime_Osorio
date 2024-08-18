@@ -4,11 +4,16 @@
  box-sizing: border-box;
 
 }
+:root{
+ --texto: #EEF9E1;
+ --fondo: #0A0914;
+ --titulo: #F7CD2C;
+}
 body{
  width: 50%;
  margin:  0 auto ;
  background-color: black;
- color: white;
+ color: var(--texto);
  font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -26,9 +31,11 @@ section{
  height: 100dvh;
 }
 h2{
- text-align: center;
- margin: 20px;
+ margin: 30px 0;
  font-size: 30px;
+ /* text-align: center; */
+ color: var(--titulo);
+ /* text-shadow: 1px 1px 1px var(--texto); */
 }
 p{
  margin: 20px 0;
