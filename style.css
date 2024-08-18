@@ -1,0 +1,22 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+body{
+ background-color: black;
+ color: white;
+}
+header{
+ margin: 20px;
+ height: 100px;
+ text-align: center;
+}
+section.side{
+ height: 100px;
+}
+
+section{
+ height: 100dvh;
+}
