@@ -48,6 +48,7 @@ function comparacion() {
 
 // Día 2
 
+/* 
 let nombre = prompt("¿Cual es tu nombre?");
 let edad = prompt("¿Cuantos años tienes?");
 let lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?");
@@ -59,4 +60,46 @@ if (teGusta == 1) {
   alert("¡Muy bien! Sigue estudiando y tendrás mucho éxito.")
 } else {
   alert("Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?")
+} 
+*/
+
+// Día 3
+
+/* 
+Tu desafío de hoy es crear los destinos posibles de un juego, en el que el usuario pueda elegir:
+
+1.Si quiere seguir hacia el área de Front-End o seguir hacia el área de Back-End.
+
+2.Si está en el área de Front-End, si quiere aprender React o aprender Vue. Si está en el área de Back-End, podrá aprender C# o aprender Java.
+ 
+3.Después, independientemente de las elecciones anteriores, el usuario podrá elegir entre seguir especializándose en el área elegida o desarrollarse para convertirse en Fullstack. Debes mostrar en pantalla un mensaje específico para cada elección.
+ 
+4.Finalmente, pregunta en qué tecnologías le gustaría a la persona especializarse o conocer. Aquí, la persona puede responder N tecnologías, una a la vez. Entonces, mientras continúe respondiendo **ok** a la pregunta: "¿Hay alguna otra tecnología que te gustaría aprender?", sigue presentando el Prompt, para que complete el nombre de la tecnología en cuestión. Y, justo después, presenta un mensaje comentando algo sobre la tecnología ingresada.
+*/
+let first = prompt("¿Cual es tu enfoque en el desarrollo de paginas web, Front-End o Back-End?");
+let lowFirst = first.toLocaleLowerCase();
+
+let numeroDeLenguajes = [];
+let control = true;
+
+if (lowFirst === "frontend"|| lowFirst === "front-end") {
+  let especialFront = prompt(`Elegiste ${lowFirst}, ¿Quieres aprender React o Vue?`);
+
+} if(lowFirst === "backend" || lowFirst === "back-end"){
+  let especialBack = prompt(`Elegiste ${lowFirst}, ¿Quieres aprender C# o Java?`);
 }
+
+let decicion = prompt(`¿Deseas especializarte o volverte Fullstack?`);
+
+
+while (control) {
+
+  let nuevoTec =  prompt("¿Hay alguna otra tecnología que te gustaría aprender?");
+  if (nuevoTec === null || nuevoTec === "") {
+    control = false;
+  }else{
+    numeroDeLenguajes.push(nuevoTec)
+  }
+  alert("Tecnología ingresada")
+}
+alert(`Las tecnologias son: ${numeroDeLenguajes}`)
