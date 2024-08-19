@@ -76,6 +76,8 @@ Tu desafío de hoy es crear los destinos posibles de un juego, en el que el usua
  
 4.Finalmente, pregunta en qué tecnologías le gustaría a la persona especializarse o conocer. Aquí, la persona puede responder N tecnologías, una a la vez. Entonces, mientras continúe respondiendo **ok** a la pregunta: "¿Hay alguna otra tecnología que te gustaría aprender?", sigue presentando el Prompt, para que complete el nombre de la tecnología en cuestión. Y, justo después, presenta un mensaje comentando algo sobre la tecnología ingresada.
 */
+// Respuesta Día 3 
+/* 
 let first = prompt("¿Cual es tu enfoque en el desarrollo de paginas web, Front-End o Back-End?");
 let lowFirst = first.toLocaleLowerCase();
 
@@ -103,3 +105,18 @@ while (control) {
   alert("Tecnología ingresada")
 }
 alert(`Las tecnologias son: ${numeroDeLenguajes}`)
+ */
+
+// Día 4 de 7 
+
+/* 
+¿Alguna vez has jugado a adivinar el número en el que tu amigo o amiga estaba pensando? Hoy volverás a tu infancia y harás exactamente eso. ¡Pero ahora, el juego será contra la propia computadora!
+
+Debes crear un pequeño programa que comience con un valor específico predefinido entre 0 y 10 para el número que vas a adivinar (por ejemplo, el 7).
+
+A continuación, el programa te preguntará cuál es el valor que deseas adivinar y, si aciertas, te felicitará. Si te equivocas, te dará 2 intentos más.
+
+Al final, si no aciertas en ninguno de los intentos, imprimirá cuál era el número inicial.
+
+Después de que el programa esté funcionando, intenta usar un número aleatorio en lugar de uno predefinido.
+*/
