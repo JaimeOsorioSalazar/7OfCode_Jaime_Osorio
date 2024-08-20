@@ -1,10 +1,10 @@
 // Día 1
-let numeroUn = 1
+/* let numeroUn = 1
 let stringUn = '1'
 let numeroTreinta = 30
 let stringTreinta = '30'
 let numeroDiez = 10
-let stringDiez = '10'
+let stringDiez = '10' */
 /* 
 
 if (COMPARAR numeroUn y stringUn) {
@@ -25,7 +25,7 @@ if (COMPARAR numeroDiez y stringDiez) {
   console.log('Las variables numeroDiez y stringDiez no tienen el mismo valor')
 }
 */
-function comparacion() {
+/* function comparacion() {
  if (numeroUn == stringUn) {
   console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')
  } else {
@@ -43,7 +43,7 @@ function comparacion() {
  } else {
   console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
  }
-}
+} */
 // comparacion()
 
 // Día 2
@@ -76,7 +76,7 @@ Tu desafío de hoy es crear los destinos posibles de un juego, en el que el usua
  
 4.Finalmente, pregunta en qué tecnologías le gustaría a la persona especializarse o conocer. Aquí, la persona puede responder N tecnologías, una a la vez. Entonces, mientras continúe respondiendo **ok** a la pregunta: "¿Hay alguna otra tecnología que te gustaría aprender?", sigue presentando el Prompt, para que complete el nombre de la tecnología en cuestión. Y, justo después, presenta un mensaje comentando algo sobre la tecnología ingresada.
 */
-// Respuesta Día 3 
+// Respuesta Día 3
 /* 
 let first = prompt("¿Cual es tu enfoque en el desarrollo de paginas web, Front-End o Back-End?");
 let lowFirst = first.toLocaleLowerCase();
@@ -107,7 +107,7 @@ while (control) {
 alert(`Las tecnologias son: ${numeroDeLenguajes}`)
  */
 
-// Día 4 de 7 
+// Día 4 de 7
 
 /* 
 ¿Alguna vez has jugado a adivinar el número en el que tu amigo o amiga estaba pensando? Hoy volverás a tu infancia y harás exactamente eso. ¡Pero ahora, el juego será contra la propia computadora!
@@ -120,3 +120,31 @@ Al final, si no aciertas en ninguno de los intentos, imprimirá cuál era el nú
 
 Después de que el programa esté funcionando, intenta usar un número aleatorio en lugar de uno predefinido.
 */
+/* let numero, intentos, numeroU;
+intentos = 3;
+
+function juego() {
+  numero = Math.floor(Math.random() * 10);
+  console.log(numero);
+  // numero = 7;
+  while (intentos != 0 && numero != numeroU) {
+  
+    numeroU = prompt("Adiniva que numero es entre 0 a 10")
+    
+    // let numeroU = prompt("Elige un número entre 0 a 10");
+    if (numero == numeroU) {
+      alert(`Felicidades el numero es ${numero}`);
+      
+    } else if (numero > numeroU ){
+      intentos--
+      alert(`El numero es mayor que ${numeroU}, tienes ${intentos}`);
+    }else if (numero < numeroU) {
+      alert(`el numero menor que${numeroU} `);
+      intentos--
+    }
+  }
+}
+
+juego();
+ */
+
