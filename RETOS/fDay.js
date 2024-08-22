@@ -182,34 +182,33 @@ let mas = "si";
 let saludo = prompt(
   `¡Hola! ¿Te gustaria hacer una lista de compras? (Si o No)`
 );
+
 saludo = saludo.toLocaleLowerCase();
-console.log(saludo);
 
 while (mas != "no") {
   let elemento = prompt(`¿Que deseas agregar?`);
 
   if (elemento != "") {
-    let tipo = prompt(`¿Es una fruta, lacteo, congenlado o dulces?`);
+    let tipo = prompt(`¿Es una fruta, lacteo, congelado o dulces?`);
     tipo = tipo.toLocaleLowerCase();
 
     switch (tipo) {
       case "fruta":
         FRutas.push(elemento);
-        console.log(FRutas);
-        break;
-      case "lacteo":
-        Lacteos.push(elemento);
-        console.log(Lacteos);
-        break;
-      case "congelado":
-        Congelados.push(elemento);
-        console.log(Congelados);
-        break;
-      case "dulces":
-        Dulces.push(elemento);
-        console.log(Dulces);
         break;
 
+      case "lacteo":
+        Lacteos.push(elemento);
+        break;
+
+      case "congelado":
+        Congelados.push(elemento);
+        break;
+
+      case "dulces":
+        Dulces.push(elemento);
+        break;
+      
       default:
         break;
     }
