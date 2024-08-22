@@ -148,7 +148,7 @@ function juego() {
 juego();
  */
 
-// Día 5 
+// Día 5
 /* 
 Entonces hoy, para facilitar tu visita al supermercado, debes crear un programa en Javascript que pregunte si deseas agregar un alimento a tu lista de compras, y debes poder responder con "sí" o "no".
 
@@ -171,3 +171,55 @@ El programa debería imprimir, por ejemplo:
     Congelados: 
       Dulces: chicle y gominola
 */
+
+let FRutas = [];
+let Lacteos = [];
+let Congelados = [];
+let Dulces = [];
+
+let mas = "si";
+
+let saludo = prompt(
+  `¡Hola! ¿Te gustaria hacer una lista de compras? (Si o No)`
+);
+saludo = saludo.toLocaleLowerCase();
+console.log(saludo);
+
+while (mas != "no") {
+  let elemento = prompt(`¿Que deseas agregar?`);
+
+  if (elemento != "") {
+    let tipo = prompt(`¿Es una fruta, lácteo, congenlado o dulce?`);
+    tipo = tipo.toLocaleLowerCase();
+
+    switch (tipo) {
+      case "fruta":
+        FRutas.push(elemento);
+        console.log(FRutas);
+        break;
+      case "lácteo":
+        Lacteos.push(elemento);
+        console.log(Lacteos);
+        break;
+      case "congelado":
+        Congelados.push(elemento);
+        console.log(Congelados);
+        break;
+       case "Dulces":
+        Dulces.push(elemento);
+        console.log(Dulces);
+        break;
+
+      default:
+        break;
+    }
+  }else if (elemento == "" || elemento == "nada") {
+    mas = "no";
+    console.log(FRutas);
+    console.log(Lacteos);
+    console.log(Congelados);
+    console.log(Dulces);
+    
+  }
+  
+}
