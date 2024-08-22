@@ -189,7 +189,7 @@ while (mas != "no") {
   let elemento = prompt(`¿Que deseas agregar?`);
 
   if (elemento != "") {
-    let tipo = prompt(`¿Es una fruta, lácteo, congenlado o dulce?`);
+    let tipo = prompt(`¿Es una fruta, lacteo, congenlado o dulces?`);
     tipo = tipo.toLocaleLowerCase();
 
     switch (tipo) {
@@ -197,7 +197,7 @@ while (mas != "no") {
         FRutas.push(elemento);
         console.log(FRutas);
         break;
-      case "lácteo":
+      case "lacteo":
         Lacteos.push(elemento);
         console.log(Lacteos);
         break;
@@ -205,7 +205,7 @@ while (mas != "no") {
         Congelados.push(elemento);
         console.log(Congelados);
         break;
-       case "Dulces":
+      case "dulces":
         Dulces.push(elemento);
         console.log(Dulces);
         break;
@@ -213,13 +213,22 @@ while (mas != "no") {
       default:
         break;
     }
-  }else if (elemento == "" || elemento == "nada") {
+  } else if (elemento == "" || elemento == "nada") {
     mas = "no";
-    console.log(FRutas);
-    console.log(Lacteos);
-    console.log(Congelados);
-    console.log(Dulces);
-    
+    for (let i = 0; i < FRutas.length; i++) {
+      FRutas.join(", ");
+      Lacteos.join(", ");
+      Congelados.join(", ");
+      Dulces.join(", ");
+    }
+    alert(
+      `Lista de compras: 
+      
+      Lista de frutas: ${FRutas.join(", ")} 
+      Lista de lácteos: ${Lacteos.join(", ")} 
+      Lista de congelados: ${Congelados.join(", ")} 
+      lista de dulces: ${Dulces.join(", ")}
+      `
+    );
   }
-  
 }
