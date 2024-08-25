@@ -1,52 +1,108 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --texto: #eef9e1;
+  --fondo: #0a0914;
+  --titulo: #f7cd2c;
+}
+body {
+  width: 90vw;
+  margin: 0 auto;
+  background-color: black;
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    " side sectionCode"
+    " . section1"
+    " . section2"
+    " . section3"
+    " . section4"
+    " . section5"
+    " . section6"
+    " . section7";
+  grid-template-columns: 1fr 90%;
+}
+header {
+  margin: 20px;
+  height: 100px;
+  text-align: center;
+  border-bottom: solid 2px var(--titulo);
+  grid-area: header;
+}
+header > h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--titulo);
+}
 
-}
-:root{
- --texto: #EEF9E1;
- --fondo: #0A0914;
- --titulo: #F7CD2C;
-}
-body{
- width: 50%;
- margin:  0 auto ;
- background-color: black;
- color: var(--texto);
- font-family: Arial, Helvetica, sans-serif;
-
-}
-header{
- margin: 20px;
- height: 100px;
- text-align: center;
-}
-section.side{
+section.side {
+ position: sticky;
  height: 50px;
+ top:160px;
 }
-
-section{
- margin: 10px;
- height: 100dvh;
+section.side >nav{
+ display: flex;
+ flex-direction: column;
 }
-section.s4{
- height: max-content ;
+a{
+ margin-bottom: .5rem;
+ color: var(--texto);
+ text-decoration: none;
+ letter-spacing: 1px;
+ font-weight: 100;
 }
-h2{
- margin: 30px 0;
- font-size: 30px;
- /* text-align: center; */
+a:hover{
  color: var(--titulo);
- /* text-shadow: 1px 1px 1px var(--texto); */
 }
-p{
- margin: 20px 0;
- font-size: 20px;
+section.OfCode{
+ grid-area: sectionCode;
 }
-img{
- width: 100%;
- border-radius: 30px;
- box-shadow: 1px 1px 2px var(--texto),
- -1px -1px 2px var(--texto);
+section.s1 {
+  grid-area: section1;
+}
+section.s2 {
+  grid-area: section2;
+}
+section.s3 {
+  grid-area: section3;
+}
+section.s4 {
+  grid-area: section4;
+}
+section.s5 {
+  grid-area: section5;
+}
+section.s6 {
+  grid-area: section6;
+}
+section.s7 {
+  grid-area: section7;
+}
+section {
+  margin: 10px;
+  height: 100dvh;
+}
+section.s4 {
+  height: max-content;
+}
+h2 {
+  margin: 30px 0;
+  font-size: 30px;
+  /* text-align: center; */
+  color: var(--titulo);
+  /* text-shadow: 1px 1px 1px var(--texto); */
+}
+p {
+  margin: 20px 0;
+  font-size: 20px;
+}
+img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px var(--texto), -1px -1px 2px var(--texto);
 }
