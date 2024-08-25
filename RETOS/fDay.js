@@ -154,7 +154,7 @@ Entonces hoy, para facilitar tu visita al supermercado, debes crear un programa 
 
 A continuación, preguntará qué alimento deseas agregar, y escribirás su nombre, como por ejemplo "zanahoria".
 
-Después, deberá preguntar en qué categoría se encaja ese alimento, con algunas opciones ya predefinidas, como frutas, lácteos, congelados, dulces y lo que más creas interesante. Así podrás separar todo en su respectivo grupo.
+Después, deberá preguntar en qué categoría se encaja ese alimento, con algunas opciones ya predefinidas, como Frutas, lácteos, congelados, dulces y lo que más creas interesante. Así podrás separar todo en su respectivo grupo.
 
 Por último, en caso de que ya no quieras agregar nada más a la lista de compras y respondas "no" a la primera pregunta, se mostrará una lista con todos los ítems agrupados, de la siguiente manera:
 
@@ -171,8 +171,8 @@ El programa debería imprimir, por ejemplo:
     Congelados: 
       Dulces: chicle y gominola
 */
-
-let FRutas = [];
+/* 
+let Frutas = [];
 let Lacteos = [];
 let Congelados = [];
 let Dulces = [];
@@ -194,7 +194,7 @@ while (mas != "no") {
 
     switch (tipo) {
       case "fruta":
-        FRutas.push(elemento);
+        Frutas.push(elemento);
         break;
 
       case "lacteo":
@@ -214,8 +214,8 @@ while (mas != "no") {
     }
   } else if (elemento == "" || elemento == "nada") {
     mas = "no";
-    for (let i = 0; i < FRutas.length; i++) {
-      FRutas.join(", ");
+    for (let i = 0; i < Frutas.length; i++) {
+      Frutas.join(", ");
       Lacteos.join(", ");
       Congelados.join(", ");
       Dulces.join(", ");
@@ -223,11 +223,176 @@ while (mas != "no") {
     alert(
       `Lista de compras: 
       
-      Lista de frutas: ${FRutas.join(", ")} 
+      Lista de Frutas: ${Frutas.join(", ")} 
       Lista de lácteos: ${Lacteos.join(", ")} 
       Lista de congelados: ${Congelados.join(", ")} 
       lista de dulces: ${Dulces.join(", ")}
       `
     );
   }
+}
+*/
+
+// día 6
+
+/* Otra operación muy común es la eliminación de elementos de la lista, y por eso es muy importante que sepas cómo hacerlo.
+
+Pensándolo bien, existen muchas maneras de eliminar un elemento de una lista. Puedes eliminar el primer elemento, el último, o cualquier otro del medio de la lista. Cada una de estas operaciones tiene su propio método en la documentación de arrays de Javascript. Vamos a hablar más sobre estos métodos en la sección de "Consejos".
+
+Deberás crear la opción de eliminar algún elemento de la lista, que se mostrará junto con la pregunta: “¿deseas añadir un alimento a la lista de compras?”.
+
+A partir de ahí, si la persona elige esa opción, el programa imprimirá los elementos presentes en la lista actual, y la persona deberá escribir cuál de ellos desea eliminar.
+
+Después de eso, el programa eliminará el elemento de la lista e imprimirá la confirmación de que el elemento realmente ya no está allí.
+
+Finalmente, el programa volverá al ciclo inicial de preguntas.
+
+Si, al intentar eliminar el elemento, este no se encuentra en la lista, deberás mostrar un mensaje advirtiendo de ello.
+
+Por ejemplo: “¡No fue posible encontrar el elemento en la lista!”.
+
+Recuerda que la opción de eliminar un elemento solo deberá estar disponible a partir del momento en que exista al menos un elemento en la lista de compras. */
+
+let Frutas = [];
+let Lacteos = [];
+let Congelados = [];
+let Dulces = [];
+
+let mas = "si";
+
+let saludo = prompt(
+  `¡Hola! ¿Te gustaria hacer una lista de compras? (Si o No)`
+);
+
+saludo = saludo.toLocaleLowerCase();
+
+while (mas != "no") {
+  let elemento = prompt(`
+    ¿Que deseas agregar?
+    Para quitar un elemento escribre "eliminar".
+    `);
+
+  if (elemento != "") {
+    let tipo = prompt(`
+      ¿Es fruta, lacteo, congelado o dulces?
+      Si estas eliminando, dale ok.
+      `);
+    tipo = tipo.toLocaleLowerCase();
+
+    switch (tipo) {
+      case "fruta":
+        Frutas.push(elemento);
+        break;
+
+      case "lacteo":
+        Lacteos.push(elemento);
+        break;
+
+      case "congelado":
+        Congelados.push(elemento);
+        break;
+
+      case "dulces":
+        Dulces.push(elemento);
+        break;
+
+      default:
+        break;
+    }
+  } else if (elemento == "" || elemento == "nada") {
+    mas = "no";
+    for (let i = 0; i < Frutas.length; i++) {
+      Frutas.join(", ");
+      Lacteos.join(", ");
+      Congelados.join(", ");
+      Dulces.join(", ");
+    }
+    alert(
+      `Lista de compras: 
+      
+      Lista de Frutas: ${Frutas.join(", ")} 
+      Lista de lácteos: ${Lacteos.join(", ")} 
+      Lista de congelados: ${Congelados.join(", ")} 
+      lista de dulces: ${Dulces.join(", ")}
+      `
+    );
+
+  } if (elemento == "eliminar") {
+    alert(
+      `Lista de compras: 
+      
+      Lista de Frutas: ${Frutas.join(", ")} 
+      Lista de lácteos: ${Lacteos.join(", ")} 
+      Lista de congelados: ${Congelados.join(", ")} 
+      lista de dulces: ${Dulces.join(", ")}
+      `
+    );
+
+    let tipoAEliminar = prompt(`Eliminamos de frutas, lacteo, congelado, dulces`), elementoD = prompt(`¿De ${tipoAEliminar}, que vamos a eliminar?`);
+   
+    switch (tipoAEliminar) {
+      case "fruta":
+       console.log(Frutas.includes(elementoD));
+       indicador = Frutas.indexOf(elementoD);
+       console.log(indicador);
+   
+       if (indicador == 0 ) {
+        Frutas.shift()
+       } else {
+        Frutas.splice(indicador, indicador);
+       }
+       
+       console.log(Frutas);
+        break;
+   
+      case "lacteo":
+        console.log(Lacteos.includes(elementoD));
+        indicador = Lacteos.indexOf(elementoD);
+        console.log(indicador);
+        if (indicador == 0 ) {
+         Lacteos.shift()
+        } else {
+         Lacteos.splice(indicador, indicador);
+        }
+        console.log(Lacteos);
+        
+        break;
+   
+      case "congelado":
+        indicador = Congelados.indexOf(elementoD);
+        Congelados.splice(indicador, indicador);
+        console.log(indicador);
+        if (indicador == 0 ) {
+         Congelados.shift()
+        } else {
+         Congelados.splice(indicador, indicador);
+        }
+        console.log(Congelados);
+        break;
+   
+      case "dulces":
+        console.log(Dulces.includes(elementoD));
+        indicador = Dulces.indexOf(elementoD);
+        if (indicador == 0 ) {
+         Dulces.shift()
+        } else {
+         Dulces.splice(indicador, indicador);
+        }
+       console.log(Dulces);
+       
+        break;
+   
+      default:
+        break;
+    }
+   }
+   alert(
+    `Lista de compras: 
+    
+    Lista de Frutas: ${Frutas.join(", ")} 
+    Lista de lácteos: ${Lacteos.join(", ")} 
+    Lista de congelados: ${Congelados.join(", ")} 
+    lista de dulces: ${Dulces.join(", ")}
+    `
+  );
 }
