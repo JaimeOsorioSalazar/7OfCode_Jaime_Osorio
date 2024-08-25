@@ -252,7 +252,7 @@ Si, al intentar eliminar el elemento, este no se encuentra en la lista, deberás
 Por ejemplo: “¡No fue posible encontrar el elemento en la lista!”.
 
 Recuerda que la opción de eliminar un elemento solo deberá estar disponible a partir del momento en que exista al menos un elemento en la lista de compras. */
-
+/* 
 let Frutas = [];
 let Lacteos = [];
 let Congelados = [];
@@ -396,3 +396,16 @@ while (mas != "no") {
     `
   );
 }
+ */
+
+// Día 7 
+
+/* 
+En este último desafío, mi propuesta para ti es: crea tu propia calculadora, pero con un detalle muy importante: cada operación debe ser una función diferente en tu código.
+
+Primero, la persona debe elegir una opción de operación impresa por el programa en la pantalla.
+
+Luego, debe ingresar los dos valores que desea utilizar, y el programa imprimirá el resultado de la operación en cuestión.
+
+Las opciones disponibles deben ser: suma, resta, multiplicación, división, y salir. En esta última, el programa debe detenerse y mostrar un mensaje "Hasta la próxima".
+*/
