@@ -7,10 +7,13 @@
   --texto: #eef9e1;
   --fondo: #0a0914;
   --titulo: #f7cd2c;
+  --titulo-a: #ffcc01;
+  --titulo-v: #997b02;
+
 }
 body {
   width: 85vw;
-  margin: 0 auto;
+  margin: 0 20px;
   background-color: black;
   color: var(--texto);
   font-family: Arial, Helvetica, sans-serif;
@@ -25,7 +28,7 @@ body {
     " . section5"
     " . section6"
     " . section7";
-  grid-template-columns: max-content 100%;
+  grid-template-columns: 140px 100%;
 }
 header {
   margin: 20px;
@@ -48,6 +51,13 @@ section.side {
 section.side >nav{
  display: flex;
  flex-direction: column;
+}
+a>b{
+  font-size: 900;
+  color: var(--titulo-v);
+}
+a>b:hover{
+  color: var(--titulo-a);
 }
 a{
  margin-bottom: .5rem;
@@ -91,7 +101,7 @@ section {
 section.s4 {
   height: max-content;
 }
-h2 {
+h2, h3 {
   margin: 30px 0;
   font-size: 30px;
   /* text-align: center; */

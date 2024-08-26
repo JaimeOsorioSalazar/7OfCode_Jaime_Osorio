@@ -14,7 +14,7 @@
   </header>
   <section class="side">
     <nav>
-      <a href="#OfCode">7 Of Code</a>
+      <a href="#OfCode"><b>7 Of Code</b></a>
       <a href="#1">1 día de 7</a>
       <a href="#2">2 día de 7</a>
       <a href="#3">3 día de 7</a>
@@ -87,6 +87,22 @@
       <br>
       Manejos del array para hacer lista del supermercado
     </h2>
+    <p>
+      Para hacer una lista de supermercado, se debe tener en cuenta que se quiere agregar y de que categoria es, como lo es: Frutas, lácteos, congelados, dulces.
+    </p>
+    <p>
+      Para eso se creo variables con arrays vacios, con el objetivo de que al identificar la categoria del producto se pueda agregar al array determinado manteniendo un orden 
+      <br>
+      <br>
+      Junto con eso crear una forma de quitar cierto elemento. Ese punto si fue un reto especial. 
+    </p>
+    <h3>Eliminar un elemento del array</h3>
+    <p>
+      Eliminar un elemento dentro de un array es algo complejo, ya que tenemos metodos como <b>array.pop()</b> metodo que elimina el ultimo elemento del array. El metodo <b>array.shift()</b> elimina el primer elemento del array. Pero existe una forma en la que puedes eliminar un elemento que no esta ni de primero ni de ultimo, <b>array.splice()</b> determinando la posición del alemento con <b>array.indexOf()</b> conseguimos la posicion dentro del <b>array</b>.
+    </p>
+    <p>
+      El <b>array.indexOf()</b> elimina elementos de cualquier posición pero no cuando el index es 0 ya que no elimina nada. En ese caso, usamos un <b>if</b> que determina si el <b>index = 0</b> entonces ejecute <b>array.shift()</b> sino, entonces ejecute el <b>array.splice()</b>.
+    </p>
   </section>
   <section class="s6" id="6">
     <h2>
