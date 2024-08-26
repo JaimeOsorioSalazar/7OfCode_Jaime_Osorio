@@ -9,7 +9,7 @@
   --titulo: #f7cd2c;
 }
 body {
-  width: 90vw;
+  width: 85vw;
   margin: 0 auto;
   background-color: black;
   color: var(--texto);
@@ -25,7 +25,7 @@ body {
     " . section5"
     " . section6"
     " . section7";
-  grid-template-columns: 1fr 90%;
+  grid-template-columns: max-content 100%;
 }
 header {
   margin: 20px;
@@ -86,6 +86,7 @@ section.s7 {
 section {
   margin: 10px;
   height: 100dvh;
+  width: 80%;
 }
 section.s4 {
   height: max-content;

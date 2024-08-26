@@ -398,7 +398,7 @@ while (mas != "no") {
 }
  */
 
-// Día 7 
+// Día 7
 
 /* 
 En este último desafío, mi propuesta para ti es: crea tu propia calculadora, pero con un detalle muy importante: cada operación debe ser una función diferente en tu código.
@@ -409,3 +409,26 @@ Luego, debe ingresar los dos valores que desea utilizar, y el programa imprimir�
 
 Las opciones disponibles deben ser: suma, resta, multiplicación, división, y salir. En esta última, el programa debe detenerse y mostrar un mensaje "Hasta la próxima".
 */
+
+let a = prompt(`Indicame un número`), b = prompt(`Indicame otro número`), c = prompt(`Que operación deseas, suma, resta, multiplicación, division`);
+
+a = parseInt(a);
+b = parseInt(b);
+
+switch (c) {
+  case "suma":
+    resultado = a + b;
+    break;
+  case "resta":
+    resultado = a - b;
+    break;
+  case "multiplicar":
+    resultado = a * b;
+    break;
+  case "division":
+    resultado = a / b;
+    break;
+  default:
+    break;
+}
+alert(resultado);
