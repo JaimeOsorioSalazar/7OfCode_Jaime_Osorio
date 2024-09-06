@@ -28,7 +28,6 @@ body {
     " . section5"
     " . section6"
     " . section7";
-  grid-template-columns: 140px 100%;
 }
 header {
   margin: 20px;

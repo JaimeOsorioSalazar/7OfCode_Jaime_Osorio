@@ -410,7 +410,7 @@ Luego, debe ingresar los dos valores que desea utilizar, y el programa imprimir�
 Las opciones disponibles deben ser: suma, resta, multiplicación, división, y salir. En esta última, el programa debe detenerse y mostrar un mensaje "Hasta la próxima".
 */
 
-let a = prompt(`Indicame un número`), b = prompt(`Indicame otro número`), c = prompt(`Que operación deseas, suma, resta, multiplicación, division`);
+let a = prompt(`Indicame un número`), b = prompt(`Indicame otro número`), c = prompt(`Que operación deseas, suma, resta, multiplicar, division`);
 
 a = parseInt(a);
 b = parseInt(b);
